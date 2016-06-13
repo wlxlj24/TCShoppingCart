@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3722AAF594759307055C1BCA /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FAC744D5990AA81123E65730 /* libPods.a */; };
 		96483EEB1D0DC731004D258F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 96483EEA1D0DC731004D258F /* main.m */; };
 		96483EEE1D0DC731004D258F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 96483EED1D0DC731004D258F /* AppDelegate.m */; };
 		96483EF11D0DC731004D258F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 96483EF01D0DC731004D258F /* ViewController.m */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		248F8DB486D8AB3F353D9F1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		411A9B43F7578A4CB55E3EB9 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		96483EE61D0DC731004D258F /* TCShoppingCart.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TCShoppingCart.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		96483EEA1D0DC731004D258F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		96483EEC1D0DC731004D258F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +54,7 @@
 		96483F0A1D0DC731004D258F /* TCShoppingCartUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TCShoppingCartUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		96483F0E1D0DC731004D258F /* TCShoppingCartUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TCShoppingCartUITests.m; sourceTree = "<group>"; };
 		96483F101D0DC731004D258F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAC744D5990AA81123E65730 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3722AAF594759307055C1BCA /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,6 +90,8 @@
 				96483F021D0DC731004D258F /* TCShoppingCartTests */,
 				96483F0D1D0DC731004D258F /* TCShoppingCartUITests */,
 				96483EE71D0DC731004D258F /* Products */,
+				C20F1C5B31BD9615345C0F84 /* Pods */,
+				E25614D71F60BED2A0F5BF29 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +187,23 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		C20F1C5B31BD9615345C0F84 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				411A9B43F7578A4CB55E3EB9 /* Pods.debug.xcconfig */,
+				248F8DB486D8AB3F353D9F1C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E25614D71F60BED2A0F5BF29 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAC744D5990AA81123E65730 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -187,9 +211,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 96483F131D0DC731004D258F /* Build configuration list for PBXNativeTarget "TCShoppingCart" */;
 			buildPhases = (
+				3591179291610E3346327843 /* Check Pods Manifest.lock */,
 				96483EE21D0DC731004D258F /* Sources */,
 				96483EE31D0DC731004D258F /* Frameworks */,
 				96483EE41D0DC731004D258F /* Resources */,
+				497CB9ECEC4DD10341DBE10C /* Embed Pods Frameworks */,
+				242461CF59D25285A70FE5FE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -304,6 +331,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		242461CF59D25285A70FE5FE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3591179291610E3346327843 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		497CB9ECEC4DD10341DBE10C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		96483EE21D0DC731004D258F /* Sources */ = {
@@ -451,6 +526,7 @@
 		};
 		96483F141D0DC731004D258F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 411A9B43F7578A4CB55E3EB9 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCShoppingCart/Info.plist;
@@ -462,6 +538,7 @@
 		};
 		96483F151D0DC731004D258F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 248F8DB486D8AB3F353D9F1C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = TCShoppingCart/Info.plist;
